@@ -8,11 +8,11 @@
 
 1. `LinkedList_ADM_version.cpp` is the ADM's version:
 	- which I implement the search recursivly
-	- do not follow ADM's "delete", instead I use itertive approach
+	- do not follow ADM's "delete", instead I use iterative approach
 
 2. `LinkedList_iterate_oop_version.cpp` is the LinkedList implemented using `class`
 	- all methods are using iterative approch
-	- also have some custermized constructor, which makes initialize list easier.
+	- also have some custermized constructor, which makes initialize easier.
 
 3. Both 1 and 2 are simple and basic sigly Linked List
 	- Only have three basic operation
