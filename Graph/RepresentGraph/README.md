@@ -10,11 +10,13 @@
     * This one is like cpp version of ADM's adjacency-list Graph(The same functionality and the same logical)
     * `graph_ADM.in` is the input Graph of this program.
         this graph looks like:
+        ```
         1----2 
         |  / | \
         | /  |   3
         |/   | /
         5----4
+        ```
 
 2. `easyGraph.cpp`
     * Only use `vector` to represent the Graph, which is easier than the ADM version I think.
