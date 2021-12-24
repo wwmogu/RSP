@@ -1,6 +1,7 @@
 # Ravi's Study Program
 
 Duration: 2021-2022 Summer Holiday.
+
 Aim: Getting offer from FAAMG.
 
 ----
