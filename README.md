@@ -7,18 +7,17 @@ Aim: Getting offer from FAAMG.
 ----
 
 
-
 # A summary of Beginner Tasks
 
 ## Vector amortized time
 
-When the vast majority of the operation is taking $\mathcal{O}(1)$ time, and other operation take much longer than vast majority, we could use amortized analysis.
+When the vast majority of the operation is taking <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\inline&space;\mathcal{O}(1)" title="\bg_white \inline \mathcal{O}(1)" /> time, and other operation take much longer than vast majority, we could use amortized analysis.
 
 Since we need to double the size and copy current element into new double sized array , when vector is full. 
 
-The total time we need for doubling the size is $1 + 2 + 4 + 8 + 16 +\  ...\ +x \approx 2x$.
+The total time we need for doubling the size is <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\inline&space;1&space;&plus;&space;2&space;&plus;&space;4&space;&plus;&space;8&space;&plus;&space;16&space;&plus;\&space;&space;...\&space;&plus;x&space;\approx&space;2x" title="\bg_white \inline 1 + 2 + 4 + 8 + 16 +\ ...\ +x \approx 2x" />.
 
-The amortized time said that we need $\frac{2x}{x}$ time for each adding, which is $\mathcal{O}(1)$.
+The amortized time said that we need <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\inline&space;\frac{2x}{x}" title="\bg_white \inline \frac{2x}{x}" /> time for each adding, which is <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\inline&space;\mathcal{O}(1)" title="\bg_white \inline \mathcal{O}(1)" />.
 
 
 
@@ -35,11 +34,11 @@ struct Node {
 
    `Node1 -> Node2 -> Node3 -> nullptr`
 
-  `search(var)`: $\mathcal{O}(n)$
+  `search(var)`: <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\inline&space;\mathcal{O}(n)" title="\bg_white \inline \mathcal{O}(n)" />
 
-  `insert_front(var)`: $\mathcal{O}(1)$, if linked list is unsorted.
+  `insert_front(var)`: <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\inline&space;\mathcal{O}(1)" title="\bg_white \inline \mathcal{O}(1)" />, if linked list is unsorted.
 
-  `delete(var)`: $\mathcal{O}(n)$, because we need to search the predecessor of the var first.
+  `delete(var)`: <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\inline&space;\mathcal{O}(n)" title="\bg_white \inline \mathcal{O}(n)" />, because we need to search the predecessor of the var first.
 
 * [Linked-List_Implementation](https://github.com/a1779748/RSP/tree/main/LinkedList)
 
@@ -81,16 +80,15 @@ struct Node {
 ## Balanced Binary Search Tree
 * AVL 
 
-  AVL balance: the $|balance\  factor| < 2$, which means the height of the tree is $\approx log(n)$
+  AVL balance: the <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\inline&space;|balance\&space;&space;factor|&space;<&space;2" title="\bg_white \inline |balance\ factor| < 2" />, which means the height of the tree is <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\inline&space;\approx&space;log(n)" title="\bg_white \inline \approx log(n)" />
 
-  > balance factor = $|(height\ \ of\ \ left\ \ child) - (height\ \ of\ \ right\ \ child)|$
+  > balance factor = <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\inline&space;|(height\&space;\&space;of\&space;\&space;left\&space;\&space;child)&space;-&space;(height\&space;\&space;of\&space;\&space;right\&space;\&space;child)|" title="\bg_white \inline |(height\ \ of\ \ left\ \ child) - (height\ \ of\ \ right\ \ child)|\ " />
 
-  `search(var)`: $\mathcal{O}(log(n))$
+  `search(var)`: <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\inline&space;\mathcal{O}(log(n))" title="\bg_white \inline \mathcal{O}(log(n))" />
 
-  `insert(var)`: O(search) + O(balance/swap nodes) = O(log(n) + 1) = $\mathcal{O}(log(n))$
+  `insert(var)`: O(search) + O(balance/swap nodes) = O(log(n) + 1) = <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\inline&space;\mathcal{O}(log(n))" title="\bg_white \inline \mathcal{O}(log(n))" />
 
-  `delete(var)`: O(search) + O(balance/swap nodes) = O(log(n) + 1) = $\mathcal{O}(log(n))$
-
+  `delete(var)`: O(search) + O(balance/swap nodes) = O(log(n) + 1) =<img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\inline&space;\mathcal{O}(log(n))" title="\bg_white \inline \mathcal{O}(log(n))" />
 * Red-Black 
 
 
@@ -99,13 +97,13 @@ struct Node {
 
 ## Heap (priority queue in cpp)
 
-* `get_min()` or `get_max()` -> $\mathcal{O}(1)$
-* `remove_top()` -> $\mathcal{O}(log(n))$
-  1. replace top element with the last element in the heap: $\mathcal{O}(1)$, array heap
-  2. bubble-down: $\mathcal{O}(log(n))$
-* `insert()` -> $\mathcal{O}(log(n))$
-  1. insert to the bottom (the last empty slot in the "heap array"): $\mathcal{O}(1)$
-  2. bubble-up: $\mathcal{O}(log(n))$, since binary heap is a complete binary tree which tree height is log(n)
+* `get_min()` or `get_max()` -> <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\inline&space;\mathcal{O}(1)" title="\bg_white \inline \mathcal{O}(1)" />
+* `remove_top()` -> <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\inline&space;\mathcal{O}(log(n))" title="\bg_white \inline \mathcal{O}(log(n))" />
+  1. replace top element with the last element in the heap: <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\inline&space;\mathcal{O}(1)" title="\bg_white \inline \mathcal{O}(1)" />, array heap
+  2. bubble-down: <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\inline&space;\mathcal{O}(log(n))" title="\bg_white \inline \mathcal{O}(log(n))" />
+* `insert()` -> <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\inline&space;\mathcal{O}(log(n))" title="\bg_white \inline \mathcal{O}(log(n))" />
+  1. insert to the bottom (the last empty slot in the "heap array"): <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\inline&space;\mathcal{O}(1)" title="\bg_white \inline \mathcal{O}(1)" />
+  2. bubble-up: <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\inline&space;\mathcal{O}(log(n))" title="\bg_white \inline \mathcal{O}(log(n))" />, since binary heap is a complete binary tree which tree height is log(n)
 
 
 
@@ -130,7 +128,7 @@ struct Node {
 	  * [implementation](https://github.com/a1779748/RSP/blob/main/Graph/RepresentGraph/easyGraph.cpp) 
 * BFS (using queue)
   * O(vertices + edges) on adjacency list
-  * O($vertices^2$) on adjacency matrix
+  * O(<img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\inline&space;vertices^2" title="\bg_white \inline vertices^2" />) on adjacency matrix
   * [Implementation](https://github.com/a1779748/RSP/blob/main/Graph/BFS) 
   * application
     * shortest path **on equal weighted or unweighted graph**
@@ -139,7 +137,7 @@ struct Node {
     * Make the **bipartite graph**, check if the graph is **a bipartite graph** 
 * DFS (using stack)
   * O(vertices + edges) on adjacency list
-  * O($vertices^2$) on adjacency matrix
+  * O(<img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\inline&space;vertices^2" title="\bg_white \inline vertices^2" />) on adjacency matrix
   * [Implementation](https://github.com/a1779748/RSP/tree/main/Graph/DFS) 
   * application
     * finding path
@@ -171,7 +169,7 @@ struct Node {
   * O(vertices * edges) <- normal,same as prim's
   * O(E + VlogV) <- optimal using priority queue to handle Minimum Unselected Distance part (V vertices * each insertion into heap logV) same as prim's
 * All-Pairs Shortest Path (Floyd-Warshall)
-  * O($V^3$)
+  * O(<img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\inline&space;V^3" title="\bg_white \inline V^3" />)
 * Bellman-Ford
 
 
@@ -181,7 +179,7 @@ struct Node {
 ## Quick Sort and Quick Select algorithm
 * Quick Sort
   * O(nlogn) if we choose the pivot properly
-  * O($n^2$) if the pivot do not split the array in each round
+  * O(<img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\inline&space;n^2" title="\bg_white \inline n^2" />) if the pivot do not split the array in each round
   * [Implementation](https://github.com/a1779748/RSP/blob/main/Sorting/Quicksort.cpp) 
 
 * Quick Selection
@@ -228,4 +226,6 @@ Logical: right shift by filling in the 0s
 ## Some other useful website
 
 [Algorithm visualization](https://visualgo.net/en)
+
+[README add LaTex](https://latex.codecogs.com/)
 
