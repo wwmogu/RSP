@@ -227,4 +227,4 @@ Logical: right shift by filling in the 0s
 ## Some other useful website
 
 [Algorithm visualization](https://visualgo.net/en)
-
+<img src="https://render.githubusercontent.com/render/math?math=e^{i \pi} = -1">
