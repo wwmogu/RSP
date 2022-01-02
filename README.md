@@ -74,7 +74,7 @@ struct Node {
 
   **AVL:**
 
-  ​	maintain a balance factor{abs(#left - #right)} for each node, when “balance factor > 1” we rebalancing the BST by rotating three node.
+  1. maintain a balance factor{abs(#left - #right)} for each node, when “balance factor > 1” we rebalancing the BST by rotating three node.
 
   **Red-Black:**
 
@@ -93,22 +93,22 @@ struct Node {
 * Big-Oh: (log n is the height of tree, since the trees are balanced)
 
   **Search:**
-
-          AVL: avg→O(logn) worst→O(logn)
-
-          Red-Black: avg→O(logn) worst→O(logn)
-
+  	
+		AVL: avg→O(logn) worst→O(logn)
+	
+		Red-Black: avg→O(logn) worst→O(logn)
+  
   **Insert:**
-
-  ​	AVL: avg→O(logn) worst→O(logn)
-
-  ​	Red-Black: avg→amortizedO(1) worst→O(logn)
-
+  	
+		AVL: avg→O(logn) worst→O(logn)
+	
+		Red-Black: avg→amortizedO(1) worst→O(logn)
+  
   **Delete:**
-
-  ​	AVL: avg→O(logn) worst→O(logn)
-
-  ​	Red-Black: avg→amortized O(1) worst→O(logn)
+  	
+		AVL: avg→O(logn) worst→O(logn)
+	
+		Red-Black: avg→amortized O(1) worst→O(logn)
 
 Notes for cpp: map, multimap, multiset in cpp are implemented by Red-Black tree.
 
@@ -134,9 +134,9 @@ Notes for cpp: map, multimap, multiset in cpp are implemented by Red-Black tree.
 
   for example:
 
-  ​	The word `apple` would be stored in a path like a(no)→p(no)→p(no)→l(no)→e(no)→_(yes)
+  	The word `apple` would be stored in a path like a(no)→p(no)→p(no)→l(no)→e(no)→_(yes)
 
-  ​	when we search along this path, when we reach `_` we will know the characters before will form a “word”.
+  	when we search along this path, when we reach `_` we will know the characters before will form a “word”.
 
 * Big-Oh:
 
@@ -178,7 +178,7 @@ Notes for cpp: map, multimap, multiset in cpp are implemented by Red-Black tree.
 
   A tree which includes all of the Graph’s vertices, and this tree has the minimum weight
 
-- ~~Prim’s algorithm:~~
+- ~~Prim’s algorithm:~~ (not finished)
 
   * How it works:
     1. Choose a start vertex and add it to the spanning tree.
@@ -233,7 +233,7 @@ Notes for cpp: map, multimap, multiset in cpp are implemented by Red-Black tree.
 
 ## Shortest Path (on weighted graph)
 
-- ~~Dijkstra (greedy)~~
+- ~~Dijkstra (greedy)~~ (not finished)
   - O(vertices * edges) <- normal,same as prim's
   - O(E + VlogV) <- optimal using priority queue to handle Minimum Unselected Distance part (V vertices * each insertion into heap logV) same as prim's
 - All-Pairs Shortest Path (Floyd-Warshall)
@@ -318,7 +318,7 @@ class Singleton {
 
 * CTCI concept:
 
-​	The Singleton pattern ensures that a class has only one instance and ensures access to the instance through the application. (CTCI)
+	The Singleton pattern ensures that a class has only one instance and ensures access to the instance through the application. (CTCI)
 
 ## Factory Design Pattern
 
@@ -350,7 +350,7 @@ class child:public Base {
 
 * CTCI concept:
 
-  The Factory Method offers an interface for creating an instance of a class, with its subclasses deciding which class to instantiate. (CTCI)
+	The Factory Method offers an interface for creating an instance of a class, with its subclasses deciding which class to instantiate. (CTCI)
 
 ## Some other useful website
 
