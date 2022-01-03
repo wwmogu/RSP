@@ -95,19 +95,19 @@ struct Node {
   **Search:**
   	
 		AVL: avg→O(logn) worst→O(logn)
-	
+		
 		Red-Black: avg→O(logn) worst→O(logn)
   
   **Insert:**
   	
 		AVL: avg→O(logn) worst→O(logn)
-	
+		
 		Red-Black: avg→amortizedO(1) worst→O(logn)
   
   **Delete:**
   	
 		AVL: avg→O(logn) worst→O(logn)
-	
+		
 		Red-Black: avg→amortized O(1) worst→O(logn)
 
 Notes for cpp: map, multimap, multiset in cpp are implemented by Red-Black tree.
@@ -135,7 +135,7 @@ Notes for cpp: map, multimap, multiset in cpp are implemented by Red-Black tree.
   for example:
 
   	The word `apple` would be stored in a path like a(no)→p(no)→p(no)→l(no)→e(no)→_(yes)
-
+	
   	when we search along this path, when we reach `_` we will know the characters before will form a “word”.
 
 * Big-Oh:
@@ -178,18 +178,18 @@ Notes for cpp: map, multimap, multiset in cpp are implemented by Red-Black tree.
 
   A tree which includes all of the Graph’s vertices, and this tree has the minimum weight
 
-- ~~Prim’s algorithm:~~ (not finished)
+- Prim’s algorithm:
 
   * How it works:
     1. Choose a start vertex and add it to the spanning tree.
     2. Find the shortest connection between the spanning tree and the non-spanning tree, then add it to the spanning tree.
     3. repeat step 2 until all of the vertices are in the spanning tree.
 
-  * ~~Big-Oh:~~
+  * Big-Oh:
 
     Normally: O(V^2)
 
-    by keeping the non-spanning tree “vertex” into a binary heap, the time complexity will be O((E + V)logV).
+    ~~by keeping the non-spanning tree “vertex” into a binary heap, the time complexity will be O((E + V)logV).~~
 
 - Kruskal’s algorithm:
 
@@ -233,9 +233,29 @@ Notes for cpp: map, multimap, multiset in cpp are implemented by Red-Black tree.
 
 ## Shortest Path (on weighted graph)
 
-- ~~Dijkstra (greedy)~~ (not finished)
-  - O(vertices * edges) <- normal,same as prim's
-  - O(E + VlogV) <- optimal using priority queue to handle Minimum Unselected Distance part (V vertices * each insertion into heap logV) same as prim's
+- Dijkstra (greedy)
+  
+  * [YouTube Dijkstra]([]())
+  
+  * Usage: find the shortest path from source to every other node.
+  
+  * How it works:
+  
+    1. same as prim’s algorithm, each step we will “add” one vertex to the shortest path “tree”.
+  
+    2. But Dijkstra’s algorithm will use different approach to choose the “shortest connection”.
+  
+       How:
+  
+       1. It will keep track all of the distance between source and nodes.
+       2. Each step, we choose the nearest “non-tree” distance, and add it to the tree, also update all of the “non-tree” distance based on “tree” distance.
+       3. repeat step 2 until our target node is in the “tree”, or all of the vertices are in the “tree”.
+  
+  * Big-Oh:
+  
+    Normally: O(V^2)
+  
+    ~~Same as prim’s algorithm, by using a binary heap, the time complexity will be O(E + VlogV).~~
 - All-Pairs Shortest Path (Floyd-Warshall)
   - O(V^3)
 - Bellman-Ford
