@@ -296,7 +296,7 @@ Notes for cpp: map, multimap, multiset in cpp are implemented by Red-Black tree.
 
 `bitwise And &`: 1 iff both bits are 1
 
-`bitwise Or |`: 1 if any of two bits is 1
+`bitwise Or |`: 0 if any of two bits is 0
 
 Arithmetic: right shift by filling in the sign bit(left most bit)
 
