@@ -1,6 +1,6 @@
 |                      No.                       |                            Status                            | Submit Count | Read/Think (m) | Coding (m) | Total (m) | level | Myself? | Topic |
 | :--------------------------------------------: | :----------------------------------------------------------: | :----------: | :------------: | :--------: | :-------: | :---: | :----------: | :---: |
-| [0001](https://leetcode.com/problems/two-sum/) | [AC](https://github.com/a1779748/RSP/blob/main/LeetCode/README.md) |      1       |       1        |     1      |     2     |   Easy   |     [Yes]()      | Array |
+| [598](https://leetcode.com/problems/range-addition-ii/) | [AC](https://github.com/a1779748/LeetCode_Record/tree/main/598-range-addition-ii) |      3      |       10       |     31     |     41     |   Easy   |     [Yes](will like to my own tutorial)     | Noidea |
 
 
 
